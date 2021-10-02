@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>A Effective Algorithm for Skew Correction in Text Images</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -12,12 +12,78 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+		<style>
+			.container {
+				display: flex;
+			}
+			.col {
+				flex: 1;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>A Effective Algorithm</h2>
+					<h1 class="r-fit-text">for Skew Correction</h1>
+					<h2>in Text Images</h2>
+				</section>
+				<section>
+					<h2>About Me</h2>
+					<ul>
+						<li>NTUT IAE</li>
+						<li>Free Software Lover</li>
+						<li>Software Developer</li>
+						<li>Music Composer</li>
+						<li><a href="https://wancat.cc">wancat.cc</a></li>
+						<li><a href="https://zeko.studio">zeko.studio</a></li>
+					</ul>
+				</section>
+				<section>
+					<h1>Motivation</h1>
+					<img data-src="img/train.jpg" class="r-stretch">
+				</section>
+				<section>
+					<p>Perspective Transform</p>
+					<img data-src="img/transform.png" class="r-stretch">
+					<p class="fragment">Not very convenient</p>
+					<p class="fragment">Need corner point detection</p>
+				</section>
+				<section>
+					<h2>images are complicated, </h2>
+					<h2>so are the algorithm</h2>
+				</section>
+				<section>
+					<div class="r-stack">
+						<img data-src="img/train.jpg" height="600px">
+						<img class="fragment" data-src="img/test.jpg" height="600px">
+					</div>
+					<h2 class="fragment">Similar background</h2>
+				</section>
+				<section>
+					<ol>
+						<li>User selects the corner points manually</li>
+						<li class="fragment">Program learns the "background"</li>
+						<li class="fragment">User switches to the next image</li>
+						<li class="fragment">Program detects the corners for user</li>
+					</ol>
+				</section>
+				<section>
+					<div class="container">
+						<div class="col">
+							<p>Remove the slide</p>
+							<img data-src="img/remove_content.png">
+						</div>
+						<div class="col fragment">
+							<p>Calc histogram</p>
+							<img data-src="img/hist.png">
+							<p class="fragment">Normalization</p>
+							<p class="fragment">Binarize</p>
+						</div>
+					</div>	
+				</section>
 			</div>
 		</div>
 
