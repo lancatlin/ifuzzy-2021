@@ -1,151 +1,176 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>A Effective Algorithm for Skew Correction in Text Images</title>
+    <title>A Effective Algorithm for Skew Correction in Text Images</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-		<style>
-			.container {
-				display: flex;
-			}
-			.col {
-				flex: 1;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<h2>A Effective Algorithm</h2>
-					<h1 class="r-fit-text">for Skew Correction</h1>
-					<h2>in Text Images</h2>
-					<p>Cheng-Ta Chuang, Hung-Shin Lin</p>
-				</section>
-				<section>
-					<h2>About Me</h2>
-					<p>Hung-Shin Lin</p>
-					<ul>
-						<li>NTUT IAE</li>
-						<li>Free Software Lover</li>
-						<li>Software Developer</li>
-						<li>Music Composer</li>
-						<li><a href="https://wancat.cc">wancat.cc</a></li>
-						<li><a href="https://zeko.studio">zeko.studio</a></li>
-					</ul>
-				</section>
-				<section>
-					<h1>Motivation</h1>
-					<img data-src="img/train.jpg" class="r-stretch">
-				</section>
-				<section>
-					<p>Perspective Transform</p>
-					<img data-src="img/transform.png" class="r-stretch">
-					<p class="fragment">Not very convenient</p>
-					<p class="fragment">Need corner point detection</p>
-				</section>
-				<section>
-					<h2>images are complicated, </h2>
-					<h2>so are the algorithm</h2>
-				</section>
-				<section>
-					<div class="r-stack">
-						<img data-src="img/train.jpg" height="600px">
-						<img class="fragment" data-src="img/test.jpg" height="600px">
-					</div>
-					<h2 class="fragment">Similar background</h2>
-				</section>
-				<section>
-					<ol>
-						<li>User selects the corner points manually</li>
-						<li class="fragment">Program learns the "background"</li>
-						<li class="fragment">User switches to the next image</li>
-						<li class="fragment">Program detects the corners for user</li>
-					</ol>
-				</section>
-				<section>
-					<div class="container">
-						<div class="col">
-							<p>Remove the slide</p>
-							<img data-src="img/remove_content.png">
-						</div>
-						<div class="col fragment">
-							<p>Calc histogram</p>
-							<img data-src="img/hist.png">
-							<p class="fragment">Normalize</p>
-							<p class="fragment">Binarize</p>
-						</div>
-					</div>	
-				</section>
-				<section data-transition="slide-in fade-out">
-					<img data-src="img/colormodel1.svg">
-				</section>
-				<section data-transition="fade-in slide-out">
-					<img class="" data-src="img/colormodel2.svg">
-				</section>
-				<section data-transition="slide-in fade-out">
-					<p>Apply RGB mapping function</p>
-					<img data-src="img/filter.png">
-				</section>
-				<section data-transition="fade">
-					<p>Apply erosion and dilation</p>
-					<img data-src="img/erosion.png">
-				</section>
-				<section data-transition="fade">
-					<p>Apply connected components</p>
-					<img data-src="img/connected.png">
-				</section>
-				<section data-transition="fade-in slide-out">
-					<p>Find the nearest pixel to the corners</p>
-					<img data-src="img/corners.jpg">
-				</section>
-				<section>
-					<h2>Video Demo</h2>
-					<video data-autoplay controls="true">
-						<source data-src="img/example.mp4" />
-					</video>
-				</section>
-				<section>
-					<h2>Limits</h2>
-					<img class="r-stretch" data-src="img/similar_color.png">
-					<p>slide and background have similar color</p>
-				</section>
-				<section>
-					<h2>Future Outlook</h2>
-					<ul>
-						<li>Try other color models (HSV, YCrCb)</li>
-						<li>Image adjustment features (contrast, brightness)</li>
-					</ul>
-				</section>
-				<section>
-					<h1>Thank you for listening</h1>
-				</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <script
+      src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .container {
+        display: flex;
+      }
+      .col {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>A Effective Algorithm</h2>
+          <h1 class="r-fit-text">for Skew Correction</h1>
+          <h2>in Text Images</h2>
+          <p>Cheng-Ta Chuang, Hung-Shin Lin</p>
+        </section>
+        <section>
+          <h2>About Me</h2>
+          <p>Hung-Shin Lin</p>
+          <ul>
+            <li>Taipei Tech</li>
+            <li>Intelligent Automation Engineering</li>
+            <li>Free Software Lover</li>
+            <li>Software Developer</li>
+            <li>Music Composer</li>
+            <li><a href="https://wancat.cc">wancat.cc</a></li>
+            <li><a href="https://zeko.studio">zeko.studio</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Motivation</h1>
+          <div class="container r-stretch">
+            <div class="col">
+              <img data-src="img/train.jpg" />
+            </div>
+            <div class="col">
+              <ul>
+                <li>Taking pictures of slide in the class</li>
+                <li>Not at a good position</li>
+                <li>Hard to read and organize</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <p>Perspective Transform</p>
+          <img data-src="img/transform.png" class="r-stretch" />
+          <p>Not very convenient</p>
+          <p>Need corner point detection</p>
+        </section>
+        <section>
+          <h2>The images are complicated,</h2>
+          <h2>so are the algorithms</h2>
+        </section>
+        <section>
+          <h2>Similar background</h2>
+          <div class="container r-stretch">
+            <div class="col">
+              <img data-src="img/train.jpg" />
+            </div>
+            <div class="col">
+              <img data-src="img/test.jpg" />
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Method</h2>
+          <ol>
+            <li>User selects the corner points manually</li>
+            <li>Program learns the "background"</li>
+            <li>User switches to the next image</li>
+            <li>Program detects the corners for user</li>
+          </ol>
+        </section>
+        <section>
+          <div class="container">
+            <div class="col">
+              <p>Remove the slide</p>
+              <img data-src="img/remove_content.png" />
+            </div>
+            <div class="col fragment">
+              <p>Calc histogram</p>
+              <img data-src="img/hist.png" />
+              <p class="fragment">Normalize</p>
+              <p class="fragment">Binarize</p>
+            </div>
+          </div>
+        </section>
+        <section data-transition="slide-in fade-out">
+          <img data-src="img/colormodel1.svg" />
+        </section>
+        <section data-transition="fade-in slide-out">
+          <img class="" data-src="img/colormodel2.svg" />
+        </section>
+        <section data-transition="slide-in fade-out">
+          <p>Apply RGB mapping function</p>
+          <img data-src="img/filter.png" />
+        </section>
+        <section data-transition="fade">
+          <p>Apply erosion and dilation</p>
+          <img data-src="img/erosion.png" />
+        </section>
+        <section data-transition="fade">
+          <p>Apply connected components</p>
+          <img data-src="img/connected.png" />
+        </section>
+        <section data-transition="fade-in slide-out">
+          <p>Find the nearest pixel to the corners</p>
+          <img data-src="img/corners.jpg" />
+        </section>
+        <section>
+          <h2>Experiment Results</h2>
+          <video data-autoplay controls>
+            <source data-src="img/example.mp4" />
+          </video>
+        </section>
+        <section>
+          <h2>Limits</h2>
+          <img class="r-stretch" data-src="img/similar_color.png" />
+          <p>slide and background have similar color</p>
+          <p>Try other color models (HSV, YCrCb)</p>
+        </section>
+        <section>
+          <h2>Conclusion</h2>
+          <ul>
+            <li>A simple but effective method to detect corners</li>
+            <li>The threshold has good fault tolerance</li>
+            <li>Add image adjustment features (contrast, brightness)</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Thank you for listening</h1>
+        </section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        slideNumber: "c/t",
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
