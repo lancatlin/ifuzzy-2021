@@ -42,13 +42,22 @@
           <p>Hung-Shin Lin</p>
           <ul>
             <li>Taipei Tech</li>
-            <li>Intelligent Automation Engineering</li>
+            <li>Department of Intelligent Automation Engineering</li>
             <li>Free Software Lover</li>
             <li>Software Developer</li>
             <li>Music Composer</li>
             <li><a href="https://wancat.cc">wancat.cc</a></li>
             <li><a href="https://zeko.studio">zeko.studio</a></li>
           </ul>
+        </section>
+        <section>
+          <h1>Outline</h1>
+          <ol>
+            <li>Motivation</li>
+            <li>Method</li>
+            <li>Experiment Result</li>
+            <li>Conclusion</li>
+          </ol>
         </section>
         <section>
           <h1>Motivation</h1>
@@ -89,10 +98,10 @@
         <section>
           <h2>Method</h2>
           <ol>
-            <li>User selects the corner points manually</li>
-            <li>Program learns the "background"</li>
-            <li>User switches to the next image</li>
-            <li>Program detects the corners for user</li>
+            <li>User select the corner points manually</li>
+            <li>Program create a RGB mapping function for the background</li>
+            <li>User switch to the next image</li>
+            <li>Program detect the corners for user</li>
           </ol>
         </section>
         <section>
@@ -147,6 +156,10 @@
           <h2>Conclusion</h2>
           <ul>
             <li>A simple but effective method to detect corners</li>
+            <li>
+              Use histogram, erosion / dilation, connected components to filter
+              background
+            </li>
             <li>The threshold has good fault tolerance</li>
             <li>Add image adjustment features (contrast, brightness)</li>
           </ul>
